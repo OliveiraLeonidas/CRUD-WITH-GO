@@ -1,0 +1,11 @@
+services:
+  simple-crud:
+    image: bitnami/postgresql
+    container_name: crud-go
+    restart: always
+    environment:
+      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DATABASE=go-api
+    ports:
+      - "5432:5432"
